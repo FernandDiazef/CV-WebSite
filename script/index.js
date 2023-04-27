@@ -1,4 +1,4 @@
-const API = "https://api.github.com/users/FernandDiazef";
+const API = "https://api.github.com/users/FernandDiazef/repos";
 
 const ContenedorCards = document.querySelector("#ContenedorCards");
 const CreadorDeCards = (Data) => {
@@ -21,21 +21,13 @@ const CreadorDeCards = (Data) => {
 const fetchData = async (URL) => {
     try{
 
-    let options =  {headers: 
-                        {
-                            "Authorization": "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"
-                        } 
-                   };
-    
-    let response = await fetch(URL, options);
+    let response = await fetch(URL);
     let data = await response.json();
-    let repos = await fetch(data.repos_url, options);
-    let responseRespos = await repos.json();
 
-    CreadorDeCards (responseRespos);
+    CreadorDeCards (data);
 
     }catch (error){
         console.log(error)
     }
 }
-fetchData(API);
+fetchData(API,);
