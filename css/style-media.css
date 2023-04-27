@@ -1,0 +1,10 @@
+@media screen and (max-width:576px) {
+    .imagenSkill {
+        width: 100%;
+        
+    }
+    .imagenAcercaDe {
+        width: 100%;
+        border-bottom: 3px solid black;
+    }
+}
