@@ -1,3 +1,5 @@
+import enviroment from "./config.js"
+
 const API = "https://api.github.com/users/FernandDiazef";
 
 const ContenedorCards = document.querySelector("#ContenedorCards");
@@ -23,7 +25,7 @@ const fetchData = async (URL) => {
 
     let options =  {headers: 
                         {
-                            "Authorization": "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"
+                            "Authorization": `token ${(enviroment.tokens_Github)}`
                         } 
                    };
     
